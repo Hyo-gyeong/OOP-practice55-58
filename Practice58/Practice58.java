@@ -1,4 +1,4 @@
-//ÄÄÇ»ÅÍÇĞ°ú 20190975 ½ÅÈ¿°æ
+//ì»´í“¨í„°í•™ê³¼ 20190975 ì‹ íš¨ê²½
 import java.util.Scanner;
 public class Practice58 {
 
@@ -6,66 +6,66 @@ public class Practice58 {
 
 		Scanner input = new Scanner(System.in);
 		
-		BankAccount b0 = new BankAccount("±èµ¿´ö", 100, 3.1);
-		BankAccount b1 = new BankAccount("È«±æµ¿", 2000, 2.15);
-		BankAccount b2 = new BankAccount("¼ºÃáÇâ", 500, 2.05);
+		BankAccount b0 = new BankAccount("ê¹€ë™ë•", 100, 3.1);
+		BankAccount b1 = new BankAccount("í™ê¸¸ë™", 2000, 2.15);
+		BankAccount b2 = new BankAccount("ì„±ì¶˜í–¥", 500, 2.05);
 		
-		System.out.println("ÀºÇà °èÁÂ ¸ğµÎÀÇ Á¤º¸ÀÔ´Ï´Ù.");
+		System.out.println("ì€í–‰ ê³„ì¢Œ ëª¨ë‘ì˜ ì •ë³´ì…ë‹ˆë‹¤.");
 		System.out.println(b0.toString());
 		System.out.println(b1.toString());
 		System.out.println(b2.toString());
 		
 		System.out.println();
-		System.out.print("°èÁÂ "+b0.getAccountNo()+"¿¡ ÀÔ±İÇÒ ±İ¾×À» ÀÔ·ÂÇÏ¼¼¿ä: ");
+		System.out.print("ê³„ì¢Œ "+b0.getAccountNo()+"ì— ì…ê¸ˆí•  ê¸ˆì•¡ì„ ì…ë ¥í•˜ì„¸ìš”: ");
 		int add = input.nextInt();
 		b0.deposit(add);
 		
 		if (b0.deposit(add) == true) {
-			System.out.println("ÀÔ±İÀÌ ¼º°øÇß½À´Ï´Ù.");
+			System.out.println("ì…ê¸ˆì´ ì„±ê³µí–ˆìŠµë‹ˆë‹¤.");
 			b0.setBalance(b0.getBalance() + add);
 		}
 		else {
-			System.out.println("ÀÔ±İÀÌ ½ÇÆĞÇß½À´Ï´Ù.");
+			System.out.println("ì…ê¸ˆì´ ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤.");
 		}
 		
 		System.out.println();
-		System.out.println("ÀºÇà °èÁÂ ¸ğµÎÀÇ Á¤º¸ÀÔ´Ï´Ù.");
+		System.out.println("ì€í–‰ ê³„ì¢Œ ëª¨ë‘ì˜ ì •ë³´ì…ë‹ˆë‹¤.");
 		System.out.println(b0.toString());
 		System.out.println(b1.toString());
 		System.out.println(b2.toString());
 		
 		System.out.println();
-		System.out.print("°èÁÂ "+b1.getAccountNo()+"¿¡ Ãâ±İÇÒ ±İ¾×À» ÀÔ·ÂÇÏ¼¼¿ä: ");
+		System.out.print("ê³„ì¢Œ "+b1.getAccountNo()+"ì— ì¶œê¸ˆí•  ê¸ˆì•¡ì„ ì…ë ¥í•˜ì„¸ìš”: ");
 		int remove = input.nextInt();
 		b1.withdraw(remove);
 		
 		if (b1.withdraw(remove) == true) {
-			System.out.println("Ãâ±İÀÌ ¼º°øÇß½À´Ï´Ù.");
+			System.out.println("ì¶œê¸ˆì´ ì„±ê³µí–ˆìŠµë‹ˆë‹¤.");
 			b1.setBalance(b1.getBalance() - remove);
 		}
 		else {
-			System.out.println("Ãâ±İÀÌ ½ÇÆĞÇß½À´Ï´Ù.");
+			System.out.println("ì¶œê¸ˆì´ ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤.");
 		}
 		
 		System.out.println();
-		System.out.println("ÀºÇà °èÁÂ ¸ğµÎÀÇ Á¤º¸ÀÔ´Ï´Ù.");
+		System.out.println("ì€í–‰ ê³„ì¢Œ ëª¨ë‘ì˜ ì •ë³´ì…ë‹ˆë‹¤.");
 		System.out.println(b0.toString());
 		System.out.println(b1.toString());
 		System.out.println(b2.toString());
 		
-		System.out.println("°èÁÂ "+b1.getAccountNo()+"¿¡¼­ °èÁÂ "+b2.getAccountNo()+"À¸·Î ¼Û±İÇÒ ±İ¾×À» ÀÔ·ÂÇÏ¼¼¿ä: ");
+		System.out.println("ê³„ì¢Œ "+b1.getAccountNo()+"ì—ì„œ ê³„ì¢Œ "+b2.getAccountNo()+"ìœ¼ë¡œ ì†¡ê¸ˆí•  ê¸ˆì•¡ì„ ì…ë ¥í•˜ì„¸ìš”: ");
 		int send = input.nextInt();
-		BankAccount.transfer(b1, b2, send);
+		//BankAccount.transfer(b1, b2, send); í•¨ìˆ˜ ë‘ ë²ˆ ì‹¤í–‰ë¨
 		
-		if (BankAccount.transfer(b1, b2, send) == true) {
-			System.out.println("¼Û±İÀÌ ¼º°øÇß½À´Ï´Ù.");
+		if (BankAccount.transfer(b1, b2, send) == true) { // í•¨ìˆ˜ ë‘ ë²ˆ ì‹¤í–‰ë¨
+			System.out.println("ì†¡ê¸ˆì´ ì„±ê³µí–ˆìŠµë‹ˆë‹¤.");
 		}
 		else {
-			System.out.println("¼Û±İÀÌ ½ÇÆĞÇß½À´Ï´Ù.");
+			System.out.println("ì†¡ê¸ˆì´ ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤.");
 		}
 		
 		System.out.println();
-		System.out.println("ÀºÇà °èÁÂ ¸ğµÎÀÇ Á¤º¸ÀÔ´Ï´Ù.");
+		System.out.println("ì€í–‰ ê³„ì¢Œ ëª¨ë‘ì˜ ì •ë³´ì…ë‹ˆë‹¤.");
 		System.out.println(b0.toString());
 		System.out.println(b1.toString());
 		System.out.println(b2.toString());
